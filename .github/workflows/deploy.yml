@@ -1,0 +1,54 @@
+name: "Deploy and Pin"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  test:
+    uses: "./.github/workflows/ci-tests.yml"
+  deploy:
+    needs: "test"
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: "Check out the repo"
+        uses: "actions/checkout@v4"
+
+      - name: "Install Bun"
+        uses: "oven-sh/setup-bun@v1"
+
+      - name: "Install the Node.js dependencies"
+        run: "bun install --frozen-lockfile"
+
+      - name: "Build the project"
+        run: "bun run build"
+
+      - name: "Upload IPFS bundle and pin"
+        id: "upload"
+        uses: "anantaramdas/ipfs-pinata-deploy-action@a551f37c17ec3961df7c3ad52e1cd266dfd3d7e7"
+        with:
+          path: "./build/sablier-community-solana.tokenlist.json"
+          pin-name: "Sablier Default Token List (Solana)"
+          pinata-api-key: ${{ secrets.PINATA_API_KEY }}
+          pinata-secret-api-key: ${{ secrets.PINATA_API_SECRET_KEY }}
+
+      - name: "IPFS hash summary"
+        run: |
+          echo "Successfully deployed on IPFS: [${{ steps.upload.outputs.hash }}](https://cloudflare-ipfs.com/ipfs/${{
+            steps.upload.outputs.hash }})"
+
+      - name: "Upload Cloudflare DNS with latest IPFS hash"
+        env:
+          CLOUDFLARE_GATEWAY_ID: ${{ secrets.CLOUDFLARE_GATEWAY_ID }}
+          CLOUDFLARE_TOKEN: ${{ secrets.CLOUDFLARE_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+        uses: "sablier-labs/action-cloudflare-web3-gateway@main"
+        with:
+          cid: ${{ steps.upload.outputs.hash }}
+
+      - name: "Add summary"
+        run: |
+          echo "## Deployment result" >> $GITHUB_STEP_SUMMARY
+          echo "✅ Passed" >> $GITHUB_STEP_SUMMARY

@@ -1,0 +1,43 @@
+{
+  "name": "@sablier/community-token-list-solana",
+  "description": "The Sablier community token list (Solana)",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sablier Labs Ltd",
+    "url": "https://sablier.com"
+  },
+  "bugs": {
+    "url": "https://github.com/sablier-labs/community-token-list-solana/issues"
+  },
+  "devDependencies": {
+    "@uniswap/token-lists": "^1.0.0-beta.33",
+    "ajv": "^6.12.3",
+    "chai": "^4.2.0",
+    "dts-cli": "^1.4.0",
+    "mocha": "^8.0.1",
+    "prettier": "^2.8.8",
+    "prettier-plugin-sort-json": "2.0.0"
+  },
+  "homepage": "https://github.com/sablier-labs/default-token-list-solana#readme",
+  "keywords": [
+    "solana",
+    "spl",
+    "svm",
+    "sablier",
+    "token",
+    "tokenlist",
+    "token-community-list"
+  ],
+  "license": "GPL-3.0-or-later",
+  "repository": "github.com/sablier-labs/community-token-list-solana",
+  "scripts": {
+    "build": "rm -rf build && mkdir -p build && node src/write.js > build/sablier-community-solana.tokenlist.json",
+    "prettier:check": "prettier --check \"**/*.{js,json,md,yml}\" .",
+    "prettier:fix": "prettier --write \"**/*.{js,json,md,yml}\" .",
+    "prepublishOnly": "bun run test && bun run build",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "@solana/kit": "^2.1.0"
+  }
+}
