@@ -1,7 +1,7 @@
 [
   {
     "address": "Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr",
-    "chainId": 20,
+    "chainId": 900000020,
     "cluster": "devnet",
     "decimals": 6,
     "logoURI": "https://files.sablier.com/tokens/USDC.png",
@@ -10,7 +10,7 @@
   },
   {
     "address": "So11111111111111111111111111111111111111112",
-    "chainId": 20,
+    "chainId": 900000020,
     "cluster": "devnet",
     "decimals": 9,
     "logoURI": "https://files.sablier.com/tokens/WSOL.png",

@@ -11,8 +11,8 @@ clusters to extends existing functionality relying on numeric identifiers to SPL
 
 | Cluster        | Pseudo ChainId |
 | -------------- | -------------- |
-| `mainnet-beta` | `10`           |
-| `devnet`       | `20`           |
+| `mainnet-beta` | `900000010`    |
+| `devnet`       | `900000020`    |
 | `testnet`      | N/A            |
 
 ## Disclaimer
