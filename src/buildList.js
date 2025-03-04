@@ -1,6 +1,6 @@
 const { version } = require("../package.json");
 
-const solanaMainnet = require("./tokens/solana-mainnet.json");
+const solanaMainnetBeta = require("./tokens/solana-mainnet-beta.json");
 const solanaDevnet = require("./tokens/solana-devnet.json");
 
 module.exports = function buildList() {
@@ -16,7 +16,7 @@ module.exports = function buildList() {
     tags: {},
     logoURI: "https://files.sablier.com/icon-180x180.png",
     keywords: ["sablier", "default", "solana"],
-    tokens: [...solanaMainnet, ...solanaDevnet]
+    tokens: [...solanaMainnetBeta, ...solanaDevnet]
       // sort them by symbol for easy readability
       .sort((t1, t2) => {
         if (t1.cluster === t2.cluster) {
