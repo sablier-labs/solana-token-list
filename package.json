@@ -31,7 +31,7 @@
   "license": "GPL-3.0-or-later",
   "repository": "github.com/sablier-labs/community-token-list-solana",
   "scripts": {
-    "build": "rm -rf build && mkdir -p build && node src/write.js > build/sablier-community-solana.tokenlist.json",
+    "build": "rm -rf build && mkdir -p build && node src/write.js > build/sablier-solana.tokenlist.json",
     "prettier:check": "prettier --check \"**/*.{js,json,md,yml}\" .",
     "prettier:fix": "prettier --write \"**/*.{js,json,md,yml}\" .",
     "prepublishOnly": "bun run test && bun run build",
