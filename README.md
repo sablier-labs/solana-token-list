@@ -1,4 +1,4 @@
-# Sablier EVM Token List
+# Sablier Solana Token List
 
 To add your SPL token to the list, submit a request by
 [creating a GitHub issue](https://github.com/sablier-labs/solana-token-list/issues/new?assignees=&labels=token+request&template=token-request.md&title=Add+%7BTOKEN_SYMBOL%7D%3A+%7BTOKEN_NAME%7D).
