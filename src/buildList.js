@@ -6,7 +6,7 @@ const solanaDevnet = require("./tokens/solana-devnet.json");
 module.exports = function buildList() {
   const parsed = version.split(".");
   const list = {
-    name: "Sablier Community Default (Solana)",
+    name: "Sablier Solana Token Default",
     timestamp: new Date().toISOString(),
     version: {
       major: +parsed[0],

@@ -1,6 +1,6 @@
 {
-  "name": "@sablier/community-token-list-solana",
-  "description": "The Sablier community token list (Solana)",
+  "name": "@sablier/solana-token-list",
+  "description": "The Sablier Solana token list",
   "version": "1.0.0",
   "author": {
     "name": "Sablier Labs Ltd",
