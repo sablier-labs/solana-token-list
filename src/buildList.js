@@ -26,5 +26,5 @@ module.exports = function buildList() {
       }),
   };
 
-  return list;
+  return Promise.resolve(list);
 };

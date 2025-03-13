@@ -1,5 +1,4 @@
 # directories
-build
 dist
 node_modules
 
@@ -8,6 +7,7 @@ node_modules
 *.log
 .DS_Store
 .pnp.*
+build/**/*.json
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
