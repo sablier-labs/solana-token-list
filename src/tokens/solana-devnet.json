@@ -6,6 +6,7 @@
     "decimals": 6,
     "logoURI": "https://files.sablier.com/tokens/USDC.png",
     "name": "USD Coin Dev",
+    "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
     "symbol": "USDC"
   },
   {
@@ -15,6 +16,7 @@
     "decimals": 9,
     "logoURI": "https://files.sablier.com/tokens/WSOL.png",
     "name": "Wrapped SOL",
+    "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
     "symbol": "SOL"
   }
 ]
