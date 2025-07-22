@@ -1,13 +1,13 @@
 [
   {
-    "address": "Gh9ZwEmdLJ8DscKNTkTqPbNwLNNBjuSzaG9Vp2KGtKJr",
+    "address": "6SNumpJmqb1CAKsxxiVqXxjTUXe1TxPbUi9jd7wG4a1P",
     "chainId": 900000020,
     "cluster": "devnet",
     "decimals": 6,
     "logoURI": "https://files.sablier.com/tokens/USDC.png",
-    "name": "USD Coin Dev",
+    "name": "USDC Dev",
     "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
-    "symbol": "USDC"
+    "symbol": "USDCD"
   },
   {
     "address": "So11111111111111111111111111111111111111112",
